@@ -16,13 +16,22 @@ const forecast = (latitude, longitude, callback) => {
       callback(
         undefined,
         body.current.observation_time +
-          " It is currently " +
+          ". Mostly " +
           body.current.weather_descriptions +
-          ". It is " +
+          " throughout the day. It is currently " +
           body.current.temperature +
-          " degress out. Humidity is  " +
+          " degress out. Humidity is " +
           body.current.humidity +
           "%"
+
+        // body.current.observation_time +
+        //   ". It is currently " +
+        //   body.current.temperature +
+        //   " degress out. " +
+        //   body.current.weather_descriptions +
+        //   ". Humidity is  " +
+        //   body.current.humidity +
+        //   "%"
       );
     }
   });
